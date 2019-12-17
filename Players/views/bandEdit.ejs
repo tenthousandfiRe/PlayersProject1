@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/stylematerialize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Players</title>
+</head>
+
+<body>
+  <div class="parallax">
+    <nav class=" navcolor tt">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo right">
+          <img class="loguito" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/ITunes_12.png" alt="">
+        </a>
+        <ul id="nav-mobile" class="left ">
+          <li><a href="sass.html">Crea tu Perfil</a></li>
+          <li><a href="badges.html">Eventos</a></li>
+          <li><a href="collapsible.html">Sobre Nosotros</a></li>
+          <li><a href="/bandas">Bandas Disponibles <span class="new badge">6</span></a></li>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class=" parallax">
+    
+      <div class="video center">
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/h1vYbHHhqYE?autoplay=1">
+
+        </iframe>
+      </div>
+
+    >
+    <div class="row midiv borde">
+      <div class=" parallax">
+        <div class="row midiv">
+          <div class=" col s6 divform">
+            <form class="kk " action="/band/update/<%=results[0].band_id %>" method="POST">
+              <div class="row">
+                <div class="input-field col s6 offset-s8">
+                  <input placeholder="Band Name" id="Name" type="text" class="validate formsito kk"
+                    value="<%=results[0].bandName %>" name="bandName">
+                  <label for="Name">
+                    <h6>Band</h6>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6 offset-s8 kk">
+                  <input id="" type="text" class="validate formsito kk" value="<%=results[0].foundationYear %>"
+                    name="foundationYear">
+                  <label for="Genre">Foundation Year</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6 offset-s8">
+                  <input id="instrument" type="text" class="validate formsito kk" value="<%=results[0].style %>"
+                    name="style">
+                  <label for="instrument">Style</label>
+                </div>
+              </div>
+              <div class="row kk">
+                <div class="input-field col s6 offset-s8">
+
+                </div>
+                <div class="input-field col s6 offset-s8">
+
+                  <% results.forEach(function(members){%>
+                  <option name="id_musician" value="<%=members.musician_id%>"><%=members.name%>
+                  </option>
+                  <%})%>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6 offset-s8">
+                  <button class="btn waves-effect waves-light botoncolor" type="submit">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+
+
+      <footer class="page-footer parallax2">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Maqueta Proyecto Final</h5>
+              <p class="grey-text text-lighten-4"> Una pequeña idea de la pagina principal de lo que me gustaría
+                presentar
+                como proyecto final.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text tt">RRSS</h5>
+              <ul>
+
+                <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            © 2020 Copyright Todos los Derechos Reservados. Codehouse.Academy
+            <a class="grey-text text-lighten-4 right" href="#!">tenthousandfiRe. <i
+                class="material-icons">whatshot</i></a>
+
+          </div>
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../stylesheets/stylematerialize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Players</title>
+</head>
+
+<body>
+  <div class="parallax">
+    <nav class=" navcolor">
+      <div class="nav-wrapper">
+        <a href="# " class="brand-logo right">
+          <img class="loguito" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/ITunes_12.png" alt="">
+        </a>
+        <ul id="nav-mobile" class="left ">
+          <li><a href="#s1">Crea tu Perfil</a></li>
+          <li><a href="#jj">Eventos</a></li>
+          <li><a href="#zz">Sobre Nosotros</a></li>
+          <li><a href="#kk">Bandas Disponibles <span class="new badge">6</span></a></li>
+
+        </ul>
+      </div>
+    </nav>
+    </br>
+    </br>
+    </br>
+    <div class="container enunciado">
+      <div class="row" id="jj">
+    <h3>Crea tu perfil como Player o como Band!</h3>
+    <h4>Asiste a eventos como por ejemplo Jams en tu ciudad!</h4>
+    <h4>Forma parte de nuestra bolsa de músicos para poder buscar tus propios bolos o grabar tu propio EP!</h4>
+    <h4>No lo dudes, empieza ya a formar parte de <strong>PLAYERS!</strong></h4>
+  </div>
+</div>
+    <div class="parallax topvideo">
+      <div class="video center">
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/0MOuSgjCNNQ?autoplay=1">
+
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+  <div class="containercards parallax">
+    <div class="container enunciado" style="justify-content: center;">
+      <h3>Músicos Disponibles</h3>
+    </div>
+    <div class="row ">
+      <% results.forEach(function(musician){%>
+      <div class="col s3 offset-s1">
+
+        <div class="card content1 hoverable ">
+          <div class="card-image waves-effect waves-block waves-light parallax pic hoverable scale-transition scale-down">
+            <img class="activator profilelogo " src="../uploads/<%=musician.photo%>" alt="" id="scale-demo">
+          </div>
+          <div class="card-content card1 hoverable">
+            <span class="card-title activator dark-text text-lighten-1 ii"><%= musician.name %><i
+                class="material right">...</i></span>
+            <p><a class="color" href="#">Musician!</a></p>
+              <div class="edits">                
+                <a class="color" href="/edit/<%= musician.musician_id%>"><i class="material-icons">edit</i></a>
+                <a class="color" href="/delete/<%= musician.musician_id %>"><i class="material-icons">delete</i></a>
+              </div>
+          </div>
+          <div class="card-reveal cardi hoverable ii">
+            <span class="card-title orange-text text-lighten-3 ii">Musician BIO<i
+                class="material-icons right">close</i></span>
+            <p><%= musician.gender %><p>
+                <p><%= musician.instrument %></p>
+                <p id="dateespecifico<%= musician.musician_id %>"><%= musician.birthdate %> </p>
+                
+              </p>
+          </div>
+        </div>
+      </div>
+      <%})%>
+    </div>
+
+    <div class="row borde parallax">
+        <div class="container enunciado " style="justify-content: center;">
+      <h3>Bandas Disponibles</h3>
+    </div>
+      <% results2.forEach(function(band){%>
+      <div class="col s3 offset-s1" id="kk">
+
+        <div class="card content1 hoverable">
+          <div class="card-image waves-effect waves-block waves-light parallax pic hoverable">
+            <img class="activator profilelogo"
+              src="https://cdn.iconscout.com/icon/free/png-512/drum-1717226-1459570.png">
+          </div>
+          <div class="card-content card1 content1 hoverable">
+            <span class="card-title activator dark-text text-lighten-1"><%= band.bandName %><i
+                class="material right">...</i></span>
+            <p><a class="color" href="#">Band!</a></p>
+            <div class="edits">                
+                <a class="color" href="/edit/<%= band.band_id%>"><i class="material-icons">edit</i></a>
+                <a class="color" href="/delete/<%= band.band_id %>"><i class="material-icons">delete</i></a>
+              </div>
+          </div>
+          <div class="card-reveal cardi hoverable">
+            <span class="card-title orange-text text-lighten-3 color">Band BIO<i
+                class="material-icons right ">close</i></span>
+            <p></br>
+              <%= band.style %> </br>
+              <%= band.foundationYear %></br>
+                      
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <%})%>
+    </div>
+  </div>
+  <div class=" parallax col s1 offset-s1">
+    
+      <div class="container enunciado" style="justify-content: center;">
+          <div class="row" id="jj">
+        <h3>EVENTOS DISPONIBLES</h3>
+        <h5>21/12/20->JAM EN ZZPUB</h5>
+        <h5>5/1/20->ARCTIC MONKEYS GRABA EP EN STUDIO 8</h5>
+        <h5>12/10/20->CLASES DE BATERIA GRATIS IMPATIDAS POR PATRICK CARNEY</h5>
+      </div>
+    </div>
+  </div>
+  <div class=" parallax">
+    <div class="row midiv divform borde">
+      <div class=" col s6 ">
+        <form id="s1" action="/" method="POST" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col s5 offset-s5 color2">
+              <p> MUSICIANS</p>
+            </div>
+
+            <div class="input-field col s5 offset-s3">
+              <input placeholder="Name" id="Name" type="text" class="validate kk" value="" name="name" maxlength="10">
+              <label for="Name">
+                <h6>Musician</h6>
+              </label>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="input-field col s5 offset-s3">
+              <input id="" type="text"class="validate kk" min="1" minlength="1" maxlength="4" value="" name="birthdate" Placeholder="" required=""
+                aria-required="true">
+              <label for="Genre">Birth Year</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s5 offset-s3">
+              <input id="instrument" type="text" class="validate kk" value="" name="instrument" maxlength="10">
+              <label for="instrument">Instrument</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s5 offset-s3">
+              <select class="browser-default hey formsito selects" name="gender">
+                <option value="" name="gender" disabled selected>Choose your gender</option>
+                <option value="M" name="gender">Male</option>
+                <option value="F" name="gender">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="file-field input-field col s5 offset-s3">
+              <div class="btn botoncolor">
+                <span class="botoncolor">File</span>
+                <input type="file" class="botoncolor" name="photo" required="" aria-required="true">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s5 offset-s3">
+              <button class="btn waves-effect waves-light botoncolor" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col s6 divform" id="!">
+        <form class="" action="/user" method="POST">
+          <div class="row">
+            <div class="col s5 offset-s5 color2">
+              <p> BANDS</p>
+            </div>
+            <div class="input-field col s5 offset-s3">
+              <input placeholder="Band Name" id="bandName" type="text" class="validate kk" value="" name="bandName"  maxlength="10">
+              <label for="Name">
+                <h6>Band</h6>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s5 offset-s3">
+              <input id="" type="text" class="validate kk" value="" name="style"  maxlength="10">
+              <label for="">Music Genre</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s5 offset-s3">
+              <input id="foundation" type="number" class="validate kk" value="" max="3000" name="foundationYear"  maxlength="4">
+              <label for="foundation">Foundation Year</label>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="input-field col s5 offset-s3 boton2">
+              <button class="btn waves-effect waves-light botoncolor" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <footer class="page-footer parallax2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Maqueta Proyecto 1</h5>
+          <p class="grey-text text-lighten-4"> Una pequeña idea de la pagina principal de lo que me gustaría presentar
+            como proyecto final.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text tt" id="zz">RRSS</h5>
+          <ul>
+
+            <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Copyright Todos los Derechos Reservados. Codehouse.Academy
+        <a class="grey-text text-lighten-4 right" href="#!">tenthousandfiRe. <i class="material-icons">whatshot</i></a>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    let j = null
+      <% results.forEach(function (musician) {%>
+        j = document.getElementById("dateespecifico<%= musician.musician_id %>");
+
+        convertDate(j.innerHTML, j);
+      <% }) %>
+      function convertDate(fecha, div) {
+        let javaScriptRelease = Date.parse(fecha);
+        console.log(javaScriptRelease)
+        if (!isNaN(javaScriptRelease)) {
+          let date = new Date(javaScriptRelease);
+          let options = { year: 'numeric', month: 'numeric', day: 'numeric', };
+          let result = date.toLocaleDateString('es', options);
+          console.log(result)
+          div.innerHTML = result
+        }
+      }
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

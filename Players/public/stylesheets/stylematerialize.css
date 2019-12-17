@@ -1,0 +1,176 @@
+.parallax {
+    background-image: url("https://helpingmehear.com/wp-content/uploads/2019/03/musicians-hearing-loss.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+ul li a{
+    color: rgb(245, 240, 244) !important;
+    font-weight: 10px !important;
+    font-size: 20px !important;
+    font-family: 'Patua One', cursive !important;
+    
+}
+.navcolor {
+    /*background-color: rgba(255, 0, 200, 0.479);*/
+    background-color: rgba(255, 0, 200, 0.205);
+}
+.loguito{
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+}
+.midiv {
+    background-color: rgba(255, 0, 200, 0.096);
+}
+
+.ii {
+   color:white !important;
+
+}
+.oo{
+     color:white;
+}
+
+.uu{
+    color:white;
+}
+.card1 {
+    background-color: rgba(194, 56, 159, 0.568) !important;
+    font-family: 'Patua One', cursive !important;
+    color: white !important;
+    font-size: 19px;
+
+    
+    
+  
+}
+.card {
+    width: 350px !important;
+    font-family: 'Patua One', cursive !important;
+    color: white !important;
+    box-shadow: unset !important;
+
+    
+    
+}
+    .parallax2 {
+        background-image: url("https://helpingmehear.com/wp-content/uploads/2019/03/musicians-hearing-loss.jpg");
+        min-height: 200px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .tt {
+        font-family: 'Patua One', cursive;
+    }
+    
+
+    .pi {
+        height: 321px;
+    }
+.containerform{
+    margin: auto;
+
+}
+    
+    .hey {
+        background-color: transparent;
+    }
+
+    .formsito {
+        color: black;
+        background-color: transparent;
+    }
+
+    .divform{
+        border: 5px, solid, black !important;
+    
+        
+    }
+
+    .boton2 {
+        top: 198px;
+    }
+
+  /*::-webkit-input-placeholder { color: white !important; } */
+
+  .label {
+      color:white;
+  }
+.kk {
+    color: white;
+}
+.pic {
+    height: 245px !important;
+    min-height: 0px !important;
+}
+.content1{
+    width: 255px !important;
+}
+
+.enunciado{
+    text-align: center;
+    font-family: 'Patua One', cursive;
+    color: rgb(240, 216, 235);
+    display: flex;
+
+}
+
+.borde {
+    margin-bottom: 0 !important;
+    
+}
+
+.botoncolor{
+color: rgb(255, 255, 255) !important;
+background-color: unset !important;
+border: solid 1px white !important;
+}
+
+
+.color{
+    color:  rgb(255, 255, 255) !important;
+    font-size: 21px;
+}
+.color2{
+    color:  rgb(255, 255, 255);
+    font-size: 26px !important;
+    font-family: 'Patua One', cursive;
+}
+
+.topvideo {
+
+    height:200px !important;
+}
+
+.selects{
+    background-color: transparent;
+    color:white;
+}
+
+.edits {
+    text-align: right; 
+    
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: right !important;
+    align-items: right;
+    align-content: right;
+    margin: 0 auto;
+}
+.cardi{
+    background-color: rgba(46, 30, 42, 0.568) !important;
+    font-family: 'Patua One', cursive !important;
+    color: white !important;
+    font-size: 19px;
+
+}
+
+

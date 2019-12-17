@@ -1,0 +1,30 @@
+CREATE DATABASE players;
+use players;
+DROP TABLE musicians;
+CREATE TABLE musician (
+   musician_id int auto_increment primary key,
+   name varchar(255) NOT NULL,
+   gender char(1) NOT NULL,
+   photo varchar(255) NULL,
+   birthdate varchar(255) NULL,
+   instrument varchar(255)
+);
+DROP TABLE band;
+CREATE TABLE band (
+   band_id int auto_increment primary key,
+   style varchar(255),
+   foundationYear varchar(255),
+   bandName varchar(255) NOT NULL
+   );
+   DROP TABLE bandMembers;
+   CREATE TABLE band_member (
+	band_member_id PRIMARY KEY NOT NULL AUTO_INCREMENT INTEGER,
+	musician_id INTEGER  NOT NULL ,
+	band_id INTEGER NOT NULL,
+    CONSTRAINT fk_musician_1 FOREIGN KEY (musician_id)
+    REFERENCES musician(musician_id)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_band_1 FOREIGN KEY (band_id)
+    REFERENCES band(band_id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+    );
